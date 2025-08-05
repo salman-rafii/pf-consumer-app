@@ -2,6 +2,7 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/src/router.dart';
+import 'package:pf_consumer_app/core/router.dart';
 
 final navigationProviderProvider = Provider<PPTNavigator>((ref) {
   return PPTNavigator(ref.watch(routerProvider));
