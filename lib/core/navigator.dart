@@ -1,6 +1,11 @@
 // ignore_for_file: implementation_imports
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/src/router.dart';
+
+final navigationProviderProvider = Provider<PPTNavigator>((ref) {
+  return PPTNavigator(ref.watch(routerProvider));
+});
 
 class PPTNavigator {
   PPTNavigator(this.router);
